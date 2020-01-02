@@ -1,31 +1,22 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import { Link } from "react-router-dom";
 
 
-  const divStyle = {
-    margin: '40px',
-    border: '5px solid pink'
-  };
+
 
 export default function Navbar() {
-return (
-    <div style={divStyle}>   
-    <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
-    </div>
-)
+  return (
+    <Container>
+      <Row>
+        <Col><Link to="/">Home</Link></Col>
+        <Col><Link to="/about">About</Link></Col>
+        <Col><Link to="/contact">Contact</Link></Col>
+      </Row>
+    </Container>
+
+  )
 }
